@@ -1,0 +1,75 @@
+﻿/*
+    This is a custom CSS file created to make websites and pages
+    uniform.
+
+    ASP.NET and ASP.NET Core websites:
+
+    If you are using this file in an ASP.NET or ASP.NET Core website,
+    the file must be included int the in your layout shared page. The
+    default filenames for the following programming languages using
+    Razor code are listed below:
+    
+    C#          - _Layout.cshtml
+    F#          - _Layout.fshtml
+    Visul Basic - _Layout.vbhtml
+
+    *** Including the .css file in your ASP.NET Layout ***
+
+    The <script> tag should be formated within the App_Start folder
+    in the BuldleConfig.cs file
+
+    Example:
+
+    bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/site.css",
+                      "~/Content/custom-format.css"));
+
+
+    *** Including the .css file in your ASP.NET Core Layout ***
+
+    The <script> tag should be formated in the _Layout.cshtml view
+    within the <environment include=Development> section.
+
+    Example:
+
+   <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/custom-format.css" />
+    </environment>
+    
+    Websites Using Master Page Templates:
+
+    If you are using a Master Page template for your website you will
+    want to include this
+    in your template so the script command can appear on every page created.
+
+    If you are using triditional static HTML pages for your website, you
+    will need to include the script command for the .css filename on every
+    page you need formated.
+*/
+
+
+/* Set the list-style to none so bullets and numbering
+    are removed from ordered, and unordered lists
+*/
+ol, ul {
+    list-style: none
+}
+
+h1, h2, h3, h4, p {
+    font-family:Arial
+}
+
+.container-custom {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.body-content-custom {
+    padding-right:15px;
+    padding-left:15px;
+}
