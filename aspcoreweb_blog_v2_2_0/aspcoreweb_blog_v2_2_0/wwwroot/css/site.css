@@ -1,7 +1,9 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
+
+
 body {
-    padding-top: 130px;
+    padding-top: 110px;
     padding-bottom: 20px;
     background-color:transparent;
 }
@@ -35,4 +37,38 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+
+/*
+    The following section is an addition to the orginial
+    style sheet code. This code is not connected to the
+    Bootstrap Framework but can be used in addition their
+    css style.
+*/
+
+
+/*
+    Set the font family to Arial using the default font
+    pixels size for all header and paragraph tags.
+*/
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Arial
+}
+
+.custom-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.custom-body-content {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.button-style-transparrent {
+    background-color:transparent;
+    color:aliceblue;
 }

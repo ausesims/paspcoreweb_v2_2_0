@@ -8,7 +8,7 @@
 
 @if (showBanner)
 {
-    <nav id="cookieConsent" class="navbar navbar-default navbar-fixed-top" role="alert">
+    <nav id="cookieConsent" class="navbar navbar-default navbar-fixed-bottom" role="alert">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cookieConsent .navbar-collapse">
@@ -20,12 +20,20 @@
                 <span class="navbar-brand"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></span>
             </div>
             <div class="collapse navbar-collapse">
+                <h3>Site Cookie and Privacy Alert</h3>
                 <p class="navbar-text">
-                    Use this space to summarize your privacy and cookie use policy.
+                    This website uses cookies for features to operate normally
+                    such as buttons, menus, and site logon. By clicking on the
+                    accept button you acknowledge the sites cookie and privacy
+                    policy. For full details, click on the “Learn More” button
+                    or click on the “Accept” button to accept the site policy
+                    or click on the "Not Agree" to leave this site and be moved
+                    to the Google search page.
                 </p>
                 <div class="navbar-right">
-                    <a asp-controller="Home" asp-action="Privacy" class="btn btn-info navbar-btn">Learn More</a>
+                    <a asp-controller="Home" asp-action="Privacy" class="btn btn-info navbar-btn">Cookie and Privacy Information</a>
                     <button type="button" class="btn btn-default navbar-btn" data-cookie-string="@cookieString">Accept</button>
+                    <a href="http://www.google.com" class="btn btn-danger navbar-btn">Not Agree</a>
                 </div>
             </div>
         </div>

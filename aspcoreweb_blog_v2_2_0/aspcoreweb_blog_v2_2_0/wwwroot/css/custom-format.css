@@ -58,18 +58,12 @@ ol, ul {
     list-style: none
 }
 
-h1, h2, h3, h4, p {
+/*
+    Set the font family to Arial using the default font
+    pixels size for all header and paragraph tags.
+*/
+h1, h2, h3, h4, h5, h6, p {
     font-family:Arial
 }
 
-.container-custom {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
 
-.body-content-custom {
-    padding-right:15px;
-    padding-left:15px;
-}

@@ -40,30 +40,32 @@
 
         <div class="container-custom">
             <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Projects">Projects</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Sites">Sites</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfolio</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>@Html.ActionLink("Site Changelog", "ChangeLog", "Home")</li>
-                    </ul>
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Projects">Projects</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Sites">Sites</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfolio</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Site Changelog", "ChangeLog", "Home")</li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container-custom">
+    <div class="container-fluid">
         @RenderBody()
         <hr />
-        <footer>
-            <p>Site Created by (Ause L. Sims) Copyright &copy; 2015 - @DateTime.Now.Year - All rights reserved.</p>
-        </footer>
     </div>
+    <footer>
+        <p>Site Created by (Ause L. Sims) Copyright &copy; 2015 - @DateTime.Now.Year - All rights reserved.</p>
+    </footer>
+
+
 
 
     <environment include="Development">
