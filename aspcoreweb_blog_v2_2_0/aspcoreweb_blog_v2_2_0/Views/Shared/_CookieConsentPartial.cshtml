@@ -8,8 +8,9 @@
 
 @if (showBanner)
 {
-    <nav id="cookieConsent" class="navbar navbar-default navbar-fixed-bottom" role="alert">
-        <div class="container">
+    <nav id="cookieConsent" class="navbar navbar-default navbar-fixed-bottom"
+         style="background-color:rgba(245, 231, 231, 0.88)" role="alert">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cookieConsent .navbar-collapse">
                     <span class="sr-only">Toggle cookie consent banner</span>
@@ -20,20 +21,33 @@
                 <span class="navbar-brand"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></span>
             </div>
             <div class="collapse navbar-collapse">
-                <h3>Site Cookie and Privacy Alert</h3>
+                <h3>SITE COOKIE ALERT MESSAGE</h3>
                 <p class="navbar-text">
                     This website uses cookies for features to operate normally
-                    such as buttons, menus, and site logon. By clicking on the
-                    accept button you acknowledge the sites cookie and privacy
-                    policy. For full details, click on the “Learn More” button
-                    or click on the “Accept” button to accept the site policy
-                    or click on the "Not Agree" to leave this site and be moved
-                    to the Google search page.
+                    such as buttons, menus, registration, logon/logoff, and how
+                    this site is displayed on the screen. By clicking on the
+                    accept button you acknowledge sites cookies may be placed on
+                    your device for the above operations.</p>
+                <p class="navbar-text">
+                    NOTICE: This message text will not appear again after
+                    clicking on the "Accept" button, unless your browser cache
+                    is cleared or reset. Click on the “Accept” button to accept
+                    the site cookie policy or click on the "Not Agree" button
+                    to be navigated away from this site to the the Google search
+                    page.
                 </p>
+                <div class="nav-container">
                 <div class="navbar-right">
+                    @* The following button has been removed until the code can be reworked
+                        for a working modal popup to the privacy policy
+
                     <a asp-controller="Home" asp-action="Privacy" class="btn btn-info navbar-btn">Cookie and Privacy Information</a>
+                        
+                    *@
+
                     <button type="button" class="btn btn-default navbar-btn" data-cookie-string="@cookieString">Accept</button>
                     <a href="http://www.google.com" class="btn btn-danger navbar-btn">Not Agree</a>
+                    </div>
                 </div>
             </div>
         </div>
