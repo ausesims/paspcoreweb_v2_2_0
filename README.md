@@ -14,6 +14,23 @@ https://asimsperweb.azurewebsites.net
 # CONTENT DIRECTORY
 paspcoreweb_v2_2_0
 
+# REPOSITORY BRANCH INFORMATION
+
+This repository has four branches
+- master
+- dev-release
+- dev-test
+- dev-core
+
+master		- Contains the stable release of code.
+dev-release - The release code after it has been tested.
+dev-test	- The code is merged into this branch from dev-core when it needs to be tested.
+dev-core	- Code is ported into this branch when it has been developed localy and ready to be tested.
+
+NOTICE: Changes are published and made live via the Microsoft Azure platform only, and
+after all code has maded it to the master branch.
+
+
 # MARKUP LANGUAGES
 Razor
 HTML
