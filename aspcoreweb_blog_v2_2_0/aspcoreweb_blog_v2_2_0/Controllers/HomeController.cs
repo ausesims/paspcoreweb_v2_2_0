@@ -45,7 +45,10 @@ namespace aspcoreweb_blog_v2_2_0.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Contact information for Ause Sims";
+            ViewData["Title"] = "Contact Information for Ause L. Sims";
+            ViewData["Message"] = "You can use one of several various methods " +
+                "listed below to contact me. For online chat hours please view" +
+                " the schedule listed at the bottom of the page.";
 
             return View();
         }
