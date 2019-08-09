@@ -36,6 +36,16 @@ namespace aspcoreweb_blog_v2_2_0.Controllers
             return View();
         }
 
+        public ActionResult Blog()
+        {
+            return View();
+        }
+
+        public ActionResult Art()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
