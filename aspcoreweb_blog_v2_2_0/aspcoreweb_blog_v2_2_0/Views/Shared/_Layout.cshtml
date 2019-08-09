@@ -7,7 +7,7 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        @* <link rel="stylesheet" href="~/lib/bootstrap-4.3.1-dist/css/bootstrap.css" /> *@
+        @* <link rel="stylesheet" href="~/lib-new/bootstrap/4.3.1/dist/css/bootstrap.css" /> *@
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="~/css/custom-format.css" />
     </environment>
@@ -19,6 +19,9 @@
     </environment>
 </head>
 <body>
+    @* Set the navigation bar and menu options, with the primary navbar fixed to the top
+        of the page and the secondary bar under it. *@
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="nav-container">
             <div class="navbar-header">
@@ -44,6 +47,8 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Projects">Projects</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Sites">Sites</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="">Blog</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="">Art</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfolio</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
@@ -71,17 +76,18 @@
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
+        @* <script src="~/lib-new/jQuery/dist/jquery-3.4.1.min.js"></script> *@
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        @* <script src="~/lib/bootstrap-4.3.1-dist/js/bootstrap.js"></script> *@
+        @* <script src="~/lib-new/bootstrap/4.3.1/dist/js/bootstrap.js"></script> *@
         <script src="~/js/site.js" asp-append-version="true"></script>
 
         @*
-                    The following code are Facebook features and functions to be implimented.
-                    This code is not to go into production until a Privacy Policy for the
-                    Facebook App on developer.facebook.com has been established and approved.
+        The following code are Facebook features and functions to be implimented.
+        This code is not to go into production until a Privacy Policy for the
+        Facebook App on developer.facebook.com has been established and approved.
 
-                    <div id="fb-root"></div>
-                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=612092265647135&autoLogAppEvents=1"></script>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=612092265647135&autoLogAppEvents=1"></script>
 
         *@
 
