@@ -1,4 +1,8 @@
-﻿@page
-@model aspcoreweb_blog_v2_2_0.Views.Home.ArtModel
-@{
+﻿@{
+    ViewBag.Title = "Art Title";
 }
+
+<h3><strong>@ViewData["Art Title"]</strong></h3>
+<br />
+
+<p class="alert-info">@ViewData["Art Message"]</p>

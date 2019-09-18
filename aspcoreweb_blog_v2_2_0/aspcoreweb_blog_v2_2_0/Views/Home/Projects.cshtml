@@ -2,8 +2,16 @@
     ViewBag.Title = "Projects";
 }
 
+<h2><strong>@ViewData["Projects Title"]</strong></h2>
+<br />
+
+<p>@ViewData["Projects Message"]</p><br />
+<p>@ViewData["Projects Instructions"]</p><br />
+
+<br />
+
 <div class="container-fluid">
-    <partial name="\PageContent\ProjectList\VisualStudioEdu" />
-    <partial name="\PageContent\ProjectList\ULTE" />
+    <partial name="\PageContent\ProjectList\VisualStudioEdu" /><br />
+    <partial name="\PageContent\ProjectList\ULTE" /><br />
 </div>
 

@@ -8,49 +8,33 @@
 
 @if (showBanner)
 {
-    <nav id="cookieConsent" class="navbar navbar-default navbar-fixed-bottom"
-         style="background-color:rgba(245, 231, 231, 0.88)" role="alert">
-        <div class="container-fluid">
-            <div class="navbar-header">
+    <nav id="cookieConsent" class="navbar navbar-light fixed-bottom float-sm-left" 
+         style="background-color:transparent" role="alert">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cookieConsent .navbar-collapse">
                     <span class="sr-only">Toggle cookie consent banner</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <span class="navbar-brand"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></span>
-            </div>
-            <div class="collapse navbar-collapse">
-                <h3>SITE COOKIE ALERT MESSAGE</h3>
-                <p class="navbar-text">
-                    This website uses cookies for features to operate normally
-                    such as buttons, menus, registration, logon/logoff, and how
-                    this site is displayed on the screen. By clicking on the
-                    accept button you acknowledge sites cookies may be placed on
-                    your device for the above operations.</p>
-                <p class="navbar-text">
-                    NOTICE: This message text will not appear again after
-                    clicking on the "Accept" button, unless your browser cache
-                    is cleared or reset. Click on the “Accept” button to accept
-                    the site cookie policy or click on the "Not Agree" button
-                    to be navigated away from this site to the the Google search
-                    page.
-                </p>
-                <div class="nav-container">
-                <div class="navbar-right">
-                    @* The following button has been removed until the code can be reworked
-                        for a working modal popup to the privacy policy
-
-                    <a asp-controller="Home" asp-action="Privacy" class="btn btn-info navbar-btn">Cookie and Privacy Information</a>
-                        
-                    *@
-
-                    <button type="button" class="btn btn-default navbar-btn" data-cookie-string="@cookieString">Accept</button>
-                    <a href="http://www.google.com" class="btn btn-danger navbar-btn">Not Agree</a>
+                <span class="navbar-brand"><span class="text-info" aria-hidden="false"></span></span>
+                <div class="collapse navbar-collapse" style="background-color:rgba(49, 67, 179, 0.80); color:lightgoldenrodyellow">
+                    <div class="container-fluid">
+                        <h4><strong>COOKIE AND PRIVACY POLICY </strong></h4>
+                        <p class="navbar-text" style="color:yellow">
+                            This web site uses cookies and other technologgy for features and functions to
+                            be viewed and operate normaly. You can acknowledge the site uses these features
+                            by clicking the "Accept" button to the right of this message window. To view the
+                            sites "Cookie and Privacy" policy page, click on the "Cookie and Privacy
+                            Information" button.
+                        </p>
+                        <p class="navbar-text" style="color:whitesmoke">
+                            NOTE: Clicking on the "Accpt" button only acknowledges you have read this
+                            this message and is not a condition for access to this site.
+                        </p>
                     </div>
+                <div class="nav-container float-right">
+                    <a asp-controller="Home" asp-action="Privacy" class="btn btn-info navbar-btn">Cookie and Privacy Information</a>                  
+                    <button type="button" class="btn btn-light navbar-btn" data-cookie-string="@cookieString">Accept</button>
                 </div>
             </div>
-        </div>
     </nav>
     <script>
         (function () {
