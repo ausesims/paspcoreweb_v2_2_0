@@ -1,85 +1,76 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Ause Sims's Website</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        @* <link rel="stylesheet" href="~/lib-new/bootstrap/4.3.1/dist/css/bootstrap.css" /> *@
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/custom-format.css" />
+        <link href="~/lib/bootstrap/dist/4.3.1/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="~/css/custom-format.css" rel="stylesheet" />
     </environment>
+
     <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link href="~/lib/bootstrap/dist/4.3.1/css/bootstrap.css" rel="stylesheet" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="~/css/custom-format.css" rel="stylesheet" />
     </environment>
+
 </head>
 <body>
-    @* Set the navigation bar and menu options, with the primary navbar fixed to the top
-        of the page and the secondary bar under it. *@
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AUSE SIMS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerPrimary"
+                aria-controls="navbarTogglerPrimary" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar active" id="navbarTogglerPrimary">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="nav-container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Ause Sims</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                @* The navagation menu is relocated to a second navmenu
-                    This option will now be for the search feild or other application *@
-                <partial name="_LoginPartial" />
-            </div>
-        </div>
-
-        @* Second Navigation Bar Option *@
-        <div class="nav-container">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Projects">Projects</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Sites">Sites</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="">Blog</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="">Art</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfolio</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Site Changelog", "ChangeLog", "Home")</li>
-                </ul>
-            </div>
         </div>
     </nav>
 
-    <partial name="_CookieConsentPartial" />
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color:rgba(49, 67, 179, 0.94)">
+        <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerSecondary"
+                    aria-controls="navbarTogglerSecondary" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerSecondary">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">HOME <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Projects">PROJECTS <span class="sr-only">(current></span></a></li>
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Portfolio">PORTFOLIO <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Sites">SITES <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Blog">BLOG <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Art">ART <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">ABOUT <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">CONTACT <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item active"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="ChangeLog">CHANGE LOG <span class="sr-only">(current)</span></a></li>
+            </ul>
+         </div>
+    </nav>
 
     <div class="container-fluid">
+        <br />
         @RenderBody()
         <hr />
     </div>
+
+    <div class="navbar fixed-bottom">
+        <partial name="_CookieConsentPartial" />
+    </div>
+
     <footer>
         <p>Site Created by (Ause L. Sims) Copyright &copy; 2015 - @DateTime.Now.Year - All rights reserved.</p>
     </footer>
 
 
-
-
     <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        @* <script src="~/lib-new/jQuery/dist/jquery-3.4.1.min.js"></script> *@
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        @* <script src="~/lib-new/bootstrap/4.3.1/dist/js/bootstrap.js"></script> *@
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/jQuery/dist/jquery-3.4.1.js.js"></script>
+        <script src="~/lib/bootstrap/dist/4.3.1/js/bootstrap.js"></script>
+
+        @* <script src="~/js/site.js" asp-append-version="true"></script> *@
 
         @*
         The following code are Facebook features and functions to be implimented.
@@ -90,23 +81,13 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=612092265647135&autoLogAppEvents=1"></script>
 
         *@
+    </environment>
 
-    </environment>
     <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/lib/jQuery/dist/jquery-3.4.1.js.js"></script>
+        <script src="~/lib/bootstrap/dist/4.3.1/js/bootstrap.js"></script>
     </environment>
+
 
     @RenderSection("Scripts", required: false)
 </body>
