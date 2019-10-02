@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace aspcoreweb_blog_v2_2_0.Views.Shared.PageContent
+namespace aspcoreweb_blog_v2_2_0.Views.Shared._PartialContent.ProjectList
 {
-    public class ContactsPartialModel : PageModel
+    public class ULTEModel : PageModel
     {
         public void OnGet()
         {
