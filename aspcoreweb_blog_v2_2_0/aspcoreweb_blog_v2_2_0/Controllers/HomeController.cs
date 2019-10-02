@@ -32,7 +32,7 @@ namespace aspcoreweb_blog_v2_2_0.Controllers
         {
             ViewData["Portfolio Title"] = "PORTFOLIO";
 
-            ViewData["Portfolio Message"] = "To be implimented on 09/21/2019";
+            ViewData["Portfolio Message"] = "Delayed until 10/31/2019 12:00:00 PM EST";
 
             return View();
         }
@@ -47,7 +47,7 @@ namespace aspcoreweb_blog_v2_2_0.Controllers
         public ActionResult Blog()
         {
             ViewData["Blog Title"] = "BLOG";
-            ViewData["Blog Message"] = "To be implmented on 09/20/2019.";
+            ViewData["Blog Message"] = "Delayed until 10/31/2019 12:00:00 PM EST";
 
             return View();
         }
@@ -55,7 +55,7 @@ namespace aspcoreweb_blog_v2_2_0.Controllers
         public ActionResult Art()
         {
             ViewData["Art Title"] = "ART";
-            ViewData["Art Message"] = "To be implmented on 09/19/2019";
+            ViewData["Art Message"] = "Delayed until 10/31/2019 12:00:00 PM EST";
 
             return View();
         }
